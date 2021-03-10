@@ -9,6 +9,8 @@ floatExample = 2.323
 sumOfNumbers = 1 + 1
 # # Name, assignment operator (=), value that I am assigning
 variableName = True
+somethingToCallIt = ["students", 23, True]
+somethingToCallIt = {"helloPythonWorld": 23, "we are students": 24.5}
 # # List, sequence of values followed by [value1,value2,value3]
 # [1,2,3],
 # ["strings","stings2","string3"]
@@ -24,3 +26,5 @@ variableName = True
 print("Hello World")
 print("Welcome to DigitalCrafts Bootcamp")
 print(classSize)
+print(somethingToCallIt)
+print(somethingToCallIt)
