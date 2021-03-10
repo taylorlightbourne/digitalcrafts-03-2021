@@ -22,3 +22,4 @@
 # {"favoriteColor": "Red"}
 
 print("Hello World")
+print("Welcome to DigitalCrafts Bootcamp")
