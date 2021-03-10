@@ -1,14 +1,14 @@
 # # Variable
 # # String === "", "word", "1", "functionName"
-# greeting = "Hello World"
+greeting = "Hello World"
 # # Integer === whole number, 1, 23, 934234, 9392
-# classSize = 23
+classSize = 23
 # # Float === decimal, 4.5, 4.5565565, 4.21564151541564154515465
-# floatExample = 2.323
+floatExample = 2.323
 # # Boolean === true or false, true, false, returns a truthy or falsy value
-# sumOfNumbers = 1 + 1
+sumOfNumbers = 1 + 1
 # # Name, assignment operator (=), value that I am assigning
-# variableName = True
+variableName = True
 # # List, sequence of values followed by [value1,value2,value3]
 # [1,2,3],
 # ["strings","stings2","string3"]
@@ -23,3 +23,4 @@
 
 print("Hello World")
 print("Welcome to DigitalCrafts Bootcamp")
+print(classSize)
