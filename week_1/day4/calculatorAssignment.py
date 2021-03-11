@@ -4,6 +4,7 @@
 num1 = int(input("Enter the first number: "))
 operation = input("Enter the operation as +, -, *, or /: ")
 num2 = int(input("Enter the second number: "))
+currentInput = 
 
 def add(num1, num2):
     add = (num1 + num2)
@@ -30,4 +31,5 @@ elif operation == "*":
     multiply(num1, num2)
 elif operation == "/":
     divide(num1, num2)
+
 
