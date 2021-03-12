@@ -2,7 +2,8 @@
 # Write a program that prints the numbers from 1 to 100. 
 # But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". 
 # For numbers which are multiples of both three and five print "FizzBuzz".
-for fizzbuzz in range(101):
+
+for fizzbuzz in range(1, 101):
     if fizzbuzz % 3 == 0 and fizzbuzz % 5 == 0:
         print("fizzbuzz")
         continue
@@ -19,9 +20,9 @@ for fizzbuzz in range(101):
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
 totalSum = 0
-for x in range(1000):
-    if (x%3 == 0 or x%5 == 0):
-        totalSum = totalSum+x
+for i in range(1000):
+    if (i%3 == 0 or i%5 == 0):
+        totalSum = totalSum+i
 print(totalSum)
 
 # 3. Fibonacci Sequence
@@ -48,15 +49,14 @@ print(totalSum)
 #        n2 = nth
 #        count += 1
 
-# odd, even = 0,1
-# total = 0
-# while True:
-#     odd = odd + even
-#     even = odd + even 
-#     if even < 4000000:
-#         total += even
-#     else:
-#         break
-# print(total)
+odd, even = 0,1
+total = 0
+while True:
+    odd, even = even, odd + even
+    if even >= 4000000:
+        break
+    if even % 2 == 0:
+        total += even
+print(total)
 
 
