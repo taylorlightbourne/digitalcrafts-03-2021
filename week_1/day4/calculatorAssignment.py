@@ -13,13 +13,13 @@ def welcomeMessage():
 def operation(operator, number1, number2):
     answer = ""
     if(operator == "+"):
-        answer = int(number1) + int(number2)
+        answer = float(number1) + float(number2)
     elif(operator == "*"):
-        answer = int(number1) * int(number2)
+        answer = float(number1) * float(number2)
     elif(operator == "/"):
-        answer = int(number1) / int(number2)
+        answer = float(number1) / float(number2)
     elif(operator == "-"):
-        answer = int(number1) - int(number2)
+        answer = float(number1) - float(number2)
     else:
         print("Operator invalid")
     return print("Your operation of %s %s %s is = %s \n" % (number1, operator, number2, answer))
@@ -31,7 +31,7 @@ while(choice != "y"):
         "Please enter in your choice of operation, ( +, - , * , / )\n")
     secondNumer = input("Please enter in your second number\n")
     operation(operand, firstNumber, secondNumer)
-    quitMessage = input("Would you like to quit? y (yes) or n (no)")
+    quitMessage = input("Would you like to quit? y (yes) or n (no): ")
     choice = quitMessage
 # quitKey = input("")
 # while quitKey != "q":
