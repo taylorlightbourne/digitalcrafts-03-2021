@@ -4,11 +4,11 @@ print("****TODO APP*****\n" \
     "Enter 2 to delete task\n" \
     "Enter 3 to view all tasks\n")
 
-def add(answer1, answer2):
-    return answer1 + answer2
+# def add(answer1, answer2):
+#     return answer1 + answer2
 
-def subtract(answer1, answer2):
-    return answer1 - answer2
+# def subtract(answer1, answer2):
+#     return answer1 - answer2
 
 select = int(input("Select 1, 2, or 3 from list above: ")) 
 
@@ -17,5 +17,5 @@ if select == 1:
     priorityAnswer = input("What is the priority of the task? \n" \
     "High, Medium, or Low\n")
     print(taskAnswer + "-" + priorityAnswer) 
-elif select == 2:
-    print(answer1 - answer2)
+# elif select == 2:
+#     print(answer1 - answer2)
