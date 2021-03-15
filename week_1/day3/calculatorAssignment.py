@@ -1,36 +1,32 @@
 # Assignment 1
-num1 = input("Enter the first number: ")
-lengthOfNum1 = len(num1)
-while(lengthOfNum1 < 1):
-    num1 = input("Enter the first number: ")
-    lengthOfNum1 = len(num1)
-operator = input("Enter the operation as +, -, *, or /: ")
-lengthOfOperator = len(operator)
-while(lengthOfOperator < 1):
-    operator = input("Enter the operation as +, -, *, or /: ")
-    lengthOfOperator = len(operator)
-num2 = input("Enter the second number: ")
-lengthOfNum2 = len(num2)
-while(lengthOfNum2 < 1):
-    num2 = input("Enter the second number: ")
-    lengthOfNum2 = len(num2)
-if operator == "+":
-    answer = float(num1) + float(num2)
-    print(answer)
-if operator == "-":
-    answer = float(num1) - float(num2)
-    print(answer)
-if operator == "*":
-    answer = float(num1) * float(num2)
-    print(answer)
-if operator == "/":
-    answer = float(num1) / float(num2)
-    print(answer)
+
+def quitMessage():
+    quitMessage = input("Would you like to quit? y (yes) or n (no): ")
+    return quitMessage
+
+def operation(operator, num1, num2):
+    if(operator == "+"):
+        answer = int(num1) + int(num2)
+    elif(operator == "*"):
+        answer = int(num1) * int(num2)
+    elif(operator == "/"):
+        answer = int(num1) / int(num2)
+    elif(operator == "-"):
+        answer = int(num1) - int(num2)
+    else:
+        print("Operator invalid")
+    return print("%s %s %s = %s" % (num1, operator, num2, answer))
+
+choice = ""
+while(choice != "y"):
+    firstNum = input("Please enter in your first number: ")
+    operator = input("Please enter in your choice of operation, ( +, - , * , / ): ")
+    secondNum = input("Please enter in your second number: ")
+    
+    operation(operator, firstNum, secondNum)
+
+    choice = quitMessage()
 
 
-# Assignment 2
-num = int(input("Enter a number: "))
-if (num % 2) == 0:
-    print("{0} is Even". format(num))
-else:
-    print("{0} is Odd". format(num))
+
+
