@@ -5,7 +5,7 @@ def welcomeMessage():
     Enter 1 to add task\n
     Enter 2 to delete task\n 
     Enter 3 to view all tasks\n 
-    Press 'q' to quit application\n
+    Press 'q' to quit\n
     """)
 
     return print(message)
