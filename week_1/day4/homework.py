@@ -35,12 +35,10 @@ def delTodo():
 
 def printTodo():
     count = 1
-    print("Here is your todo list\n")
-    print("========================")
+    print("Here is your todo list: \n")
     for task in todoList:
         print("  %d. %s - %s" % (count, task["title"], task["priority"]))
         count += 1
-    print("========================")
     return "continue"
 
 
