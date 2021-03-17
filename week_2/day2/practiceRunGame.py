@@ -1,4 +1,5 @@
-# You have two characters, a Hero and a Goblin
+#testing
+# # You have two characters, a Hero and a Goblin
 # Your goal is to let them fight, whoever wins, will be printed out in a victory message
 # (Fancy way of saying a function that prints)
 # Whoever is defeated can be printed out in that message as well
