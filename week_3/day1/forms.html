@@ -1,0 +1,118 @@
+Create a form 1.
+Create a form that includes a input element and can except text from a user.
+Must be able to include text in the input field
+Must use at least one fieldset element
+Must Contain Labels
+#Create a form 2.
+Create a form that includes a input element that gives a user to select only one of many options.
+Only one selection should be able to be selected at a time.
+Must use at least one fieldset element
+Must contain labels
+#Create a form 3.
+Create a form that includes a input element that gives a user a dropdown to select only one of many options.
+Only one selection should be able to be selected at a time.
+Must use at least one fieldset element
+Must contain labels
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <form1>
+        <fieldset> 
+          <h1>User Login</h1>
+          <p>
+            <label>
+              Name:
+              <input type="text" id="name" name="email" />
+            </label>
+          </p>
+          <p>
+            <label>
+              Email:
+              <input type="email" id="email" name="email" />
+            </label>
+          </p>
+          <p>
+            <label>
+              Password:
+              <input type="password" id="password" name="password" />
+            </label>
+          </p>
+        </fieldset>
+      </form1>
+
+      <form2>
+        <fieldset>
+          <h1>Login Information</h1>
+          <p>
+            <label>
+              Name:
+              <input type="text" id="name" name="email" />
+            </label>
+          </p>
+          <p>
+            <h3>Choose Your Gender: </h3>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+                
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+          </p>
+          <p>
+            <label>
+              Email:
+              <input type="email" id="email" name="email" />
+            </label>
+          </p>
+          <p>
+            <label>
+              Password:
+              <input type="password" id="password" name="password" />
+            </label>
+          </p>
+        </fieldset>
+      </form2>
+
+      <form3>
+        <fieldset>
+          <h1>Login Information</h1>
+          <p>
+            <label>
+              Name:
+              <input type="text" id="name" name="email" />
+            </label>
+          </p>
+          <p>
+            <label>
+              <label for="Gender">Choose your gender:</label>
+                <select id="gender" name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+                </select>
+            </label>
+          </p>
+          <p>
+            <label>
+              Email:
+              <input type="email" id="email" name="email" />
+            </label>
+          </p>
+          <p>
+            <label>
+              Password:
+              <input type="password" id="password" name="password" />
+            </label>
+          </p>
+        </fieldset>
+      </form3>
+</body>
+</html>
