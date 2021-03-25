@@ -58,10 +58,12 @@ a:hover {
 .container2 {
   border: 5px solid #f4f1de;
   position: relative;
-  height: 1000px;
+  height: 1300px;
   width: 100%;
   margin: 3px;
   margin-top: 40px;
+  display: flex;
+  flex-direction: column;
 }
 .container2:before {
   position: absolute;
@@ -84,18 +86,37 @@ a:hover {
     font-family: "Playfair Display", serif;
     color: #f4f1de;
     font-size: 20px;
-    line-height: 25px;
+    line-height: 20px;
 }
 .experience-list {
     font-family: "Playfair Display", serif;
-    color: #f4f1de;
+    color: #f2cc8f;
     font-size: 25px;
-    line-height: 30px;
+    line-height: 40px;
+    flex-direction: wrap;
+    align-content: flex-start;
 }
-ul .experience-list {
-    list-style-type: circle;
-}
-
+.container3 {
+    border: 5px solid #f4f1de;
+    position: relative;
+    height: 700px;
+    width: 100%;
+    margin: 3px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    outline: none;
+  }
+  .container3:before {
+    position: absolute;
+    background: #f2cc8f;
+    content: "";
+    bottom: -12px;
+    right: -12px;
+    left: -12px;
+    top: -12px;
+    z-index: -1;
+  }
 /* media queries */
 @media (max-width: 768px) {
   nav {
@@ -107,3 +128,14 @@ ul .experience-list {
     justify-content: space-around;
   }
 }
+textarea {
+    width: 95%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  }
