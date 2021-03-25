@@ -1,0 +1,39 @@
+:root {
+    --primary-radius: 5px;
+    --primary-padding: 5px;
+  }
+.main-container {
+    font-family: "Abril Fatface", cursive;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 20% 35% 35% 10%;
+    grid-template-rows: 0.2fr 1.5fr 0.2fr;
+    grid-template-areas: 
+    "sidebar nav nav nav"
+    "sidebar main content1 advertisment"
+    "sidebar footer footer advertisment";
+}
+nav {
+    grid-area: nav;
+    background-color: #cdb4db ;
+}
+main {
+   grid-area: main; 
+   background-color: #ffc8dd;
+}
+#sidebar {
+    grid-area: sidebar;
+    background-color: #bde0fe;
+}
+footer {
+    grid-area: footer;
+    background-color: #ffafcc;
+}
+#content-div-1 {
+    grid-area: content1;
+    background-color: #a2d2ff ;
+}
+#advertisment {
+    grid-area: advertisment;
+    background-color: #88b8e6 ;
+}
