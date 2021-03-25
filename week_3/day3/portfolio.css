@@ -8,9 +8,10 @@ h1 {
   text-align: center;
   font-family: "Abril Fatface", cursive;
   font-size: 40px;
+  color: #3d405b;
 }
 nav {
-  background-color: black;
+  background-color: #e07a5f;
   font-size: 1.5em;
   display: flex;
   text-align: center;
@@ -26,14 +27,14 @@ a {
   font-family: "Playfair Display", serif;
 }
 a:hover {
-  color: grey;
+  color: #3d405b;
 }
 #container1 {
   background-color: #ffffff;
   height: 500px;
   width: 100%;
   margin: 0 auto;
-  border: 5px solid black;
+  border: 10px solid #81b29a;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -44,6 +45,9 @@ a:hover {
   border: 10px solid rgb(255, 251, 251);
   opacity: 1;
 }
+#container1 img:hover {
+    opacity: 0.5;
+}
 #container1 .blurb {
   font-size: 3em;
   color: rgb(0, 0, 0);
@@ -52,22 +56,44 @@ a:hover {
   font-family: "Playfair Display", serif;
 }
 .container2 {
-  border: 5px solid #fff;
+  border: 5px solid #f4f1de;
   position: relative;
-  height: 500px;
-  width: 102%;
-  margin: -15px;
+  height: 1000px;
+  width: 100%;
+  margin: 3px;
   margin-top: 40px;
 }
 .container2:before {
   position: absolute;
-  background: black;
+  background: #3d405b;
   content: "";
   bottom: -12px;
   right: -12px;
   left: -12px;
   top: -12px;
   z-index: -1;
+}
+.resume-objective {
+    font-family: "Playfair Display", serif;
+    color: #f4f1de;
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+}
+.resume-experience {
+    font-family: "Playfair Display", serif;
+    color: #f4f1de;
+    font-size: 20px;
+    line-height: 25px;
+}
+.experience-list {
+    font-family: "Playfair Display", serif;
+    color: #f4f1de;
+    font-size: 25px;
+    line-height: 30px;
+}
+ul .experience-list {
+    list-style-type: circle;
 }
 
 /* media queries */
