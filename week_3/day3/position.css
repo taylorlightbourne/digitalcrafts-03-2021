@@ -1,0 +1,29 @@
+.position-container {
+    position: relative;
+    left: 100px
+}
+.container {
+    position: relative;
+  }
+  .text {
+    font-size: 20px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    top: 125px;
+    left: 100px;
+}
+body {
+    margin: 0;
+}
+.header {
+    position: fixed;
+    top: 0;
+    padding: 20px;
+    background-color: #eee;
+    width: 100%;
+}
+.content {
+    padding: 20px;
+    margin-top: 40px
+}
