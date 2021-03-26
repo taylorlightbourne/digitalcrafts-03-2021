@@ -1,0 +1,158 @@
+/* 
+font-family: 'Anton', sans-serif;
+font-family: 'Open Sans', sans-serif; */
+/* * {
+    margin: 20px;
+  } */
+* {
+    box-sizing: border-box;
+}
+.header {
+    background-color: #ffffff;
+    text-align: center;
+    margin: 0;
+}
+h1 {
+    color: #3d405b ; 
+    font-family: 'Anton', sans-serif;
+    padding: 20px;
+}
+.main-container {
+    font-family: 'Anton', sans-serif;
+    display: grid;
+    height: 100vh;
+    
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 20% 60% 20%;
+    grid-template-areas: 
+    "nav nav"
+    "sidebar main"
+    "footer footer";
+}
+nav {
+    grid-area: nav;
+    background-color: #e07a5f ;
+    border-radius: var(--primary-radius);
+    padding-top: var(--primary-padding);
+    margin: 0px 50px 50px 50px;
+}
+nav ul, li, a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    font-size: 20px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-left: 100px;
+}
+a:hover {
+    color: #3d405b;
+}
+#sidebar {
+    grid-area: sidebar;
+    background-color: #81b29a;
+    border-radius: var(--primary-radius);
+    padding-top: var(--primary-padding);
+    margin-left: 50px;    
+    border: 5px solid #f4f1de;
+    text-align: center;
+    position: relative;
+}
+#sidebar:before {
+    position: absolute;
+    background: #81b29a;
+    content: "";
+    bottom: -12px;
+    right: -12px;
+    left: -12px;
+    top: -12px;
+    z-index: -1;
+}
+#sidebar img {
+    margin: 12px 12px;
+    border-radius: 30px;
+}
+#sidebar h2 {
+    margin-top: 0
+}
+#sidebar p {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 5px 0 5px
+}
+main {
+   grid-area: main; 
+   background-color: #3d405b;
+   border-radius: var(--primary-radius);
+   padding-top: var(--primary-padding);
+   margin: 0px 50px 0px 50px;
+   border: 5px solid #f4f1de;
+   position: relative;
+
+   display: grid;
+   grid-template-columns: 50% 50%;
+   grid-template-rows: 50% 50% ;
+   grid-template-areas: 
+   "job-title1 job-title2"
+   "job-role1 job-role2";
+   font-family: 'Open Sans', sans-serif;
+    
+}
+main:before {
+    position: absolute;
+    background: #3d405b;
+    content: "";
+    bottom: -12px;
+    right: -12px;
+    left: -12px;
+    top: -12px;
+    z-index: -1;
+}
+#job-title1 {
+    grid-area: job-title1;
+    color: #f2cc8f;
+    line-height: 0.5fr;
+    text-align: center;
+}
+#job-role1 {
+    grid-area: job-role1;
+    color: #ffffff;
+    text-align: left;
+    margin: -30px
+}
+#job-title2 {
+    grid-area: job-title2;
+    color: #f2cc8f; 
+    line-height: 0.5fr;
+    text-align: center;
+}
+#job-role2 {
+    grid-area: job-role2;
+    color: #ffffff;
+    text-align: left;
+    margin: -30px
+}
+footer {
+    grid-area: footer;
+    background-color: #f2cc8f;
+    border-radius: var(--primary-radius);
+    padding-top: var(--primary-padding);
+    margin: 50px 50px 0px 50px;
+}
+
+
+
+@media only screen and (max-width:500px) {
+    .main-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas:
+            "nav"
+            "sidebar"
+            "main"
+            "content1"
+            "content2"
+            "content3"
+            "footer"
+    }
+}
