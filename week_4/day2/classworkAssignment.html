@@ -1,0 +1,45 @@
+reate a div with a class name of main-container
+create an unordered list with 5 list items on it
+all the list items are created using javascript
+create an input field
+create a radio input field using javascript
+append all create stuff to the div
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main-container">
+    <ul id="list">
+
+    </ul>
+    </div>
+</body>
+    <script>
+        const newListItem1 = document.createElement("li")
+        newListItem1.innerText = "Gym"
+
+        const newListItem2 = document.createElement("li")
+        newListItem2.innerText = "Walmart"
+
+        const newListItem3 = document.createElement("li")
+        newListItem3.innerText = "Mani & Pedi"
+
+        const newListItem4 = document.createElement("li")
+        newListItem4.innerText = "Cook"
+
+        const newListItem5 = document.createElement("li")
+        newListItem5.innerText = "Fold Laundry"
+
+        const list = document.getElementById("list")
+        console.log(list)
+
+        list.append(newListItem1, newListItem2, newListItem3, newListItem4, newListItem5)
+
+    </script>
+</html>

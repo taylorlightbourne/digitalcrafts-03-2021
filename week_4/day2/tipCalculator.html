@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tipCalculator.css">
+</head>
+
+<body>
+    <div class="formContainer">
+        <table cellpadding='2px' cellspacing='5px'>
+            <h2>Tip Calculator</h2>
+            <th></th>
+            <tr>
+                <td>Bill Amount (in Dollars): </td>
+                <td><span>$ <input type='text' id='bill' placeholder='ie. 50'></span></td>
+            </tr>
+            <tr>
+                <td>Tip Amount (in %): </td>
+                <td>
+                    <span>% <input type='text' id='tip' placeholder='ie. 15'></span>
+                </td>
+            </tr>
+            <td></td>
+            <tr>
+                <td></span></h3>
+                </td>
+            </tr>
+        </table>
+        <button onclick="calculate()" class= "button" type='button' value="calculate">Calculate Total</button>
+        <h3>The total amount with tip is: $ <span class="total"></span>
+        <hr>
+        <h2>Tip History</h2>
+    </div>
+    <script>
+       function calculate(){
+            const billAmount = number(document.querySelector("bill-input").value);
+            console.log(billAmount);
+
+            const tipAmount = number(document.querySelector("tip-input").value);
+            console.log(tipAmount);
+
+            const total = billAmount * (tipAmount / 100);
+            console.log(total);
+
+       }
+
+
+    </script>
+</body>
+
+</html>

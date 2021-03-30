@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="main-header">DOM 101</h1>
+    <ul id="list">
+        <li class="list-item1">User</li>
+        <li class="list-item2">About</li>
+        <li class="list-item3">Contacts</li>
+        <li class="list-item4">Chat</li>
+    </ul>
+</body>
+<script>
+    const heading = document.getElementById("main-header")
+    // console.log(heading.innerText)
+    heading.innerText = "He is how old?"
+    // console.log(heading.innerText)
+    heading.style.color = "pink"
+
+    const newListItem = document.createElement("li")
+    newListItem.innerText = "Returns"
+
+    const list = document.getElementById("list")
+    console.log(list)
+    list.append(newListItem)
+
+    // const list = document.getElementById("list")
+    // console.log(list)
+
+    // const listItem = document.getElementsByClassName("list-item")
+    // console.log(listItem)
+
+    // const liItems = document.getElementsByTagName("li")
+    // console.log(liItems)
+
+    // const lastListItem = document.querySelector(".list-item1")
+    // console.log(lastListItem)
+
+    // const lastListItem = document.querySelectorAll(".list-item1")
+    // console.log(lastListItem)
+
+    // const holder = lastListItem.forEach(listItem)
+    // console.log(holder)
+
+    const newDiv = document.createElement("div")
+         console.log(newDiv);
+         const newInput = document.createElement("input")
+         
+
+         newDiv.append(newInput)
+         console.log(newDiv)
+         const root = document.getElementById("root")
+         console.log(root)
+         root.append(newDiv)
+    addDiv()
+</script>
+</html>
