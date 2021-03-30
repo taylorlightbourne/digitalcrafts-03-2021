@@ -1,28 +1,33 @@
-// # Assignment 1
+function calculate(operator, number1, number2) {
+    if (operator == '+') {
+        result = number1 + number2;
+        console.log(`You did addition and your answer is ${result}`);
+    } else if (operator == '-') {
+        result = number1 - number2;
+        console.log(`You did subtraction and your answer is ${result}`);
+    } else if (operator == '*') {
+        result = number1 * number2;
+        console.log(`You did multiply and your answer is ${result}`);
+    } else if (operator == '/') {
+        result = number1 / number2;
+        console.log(`You did division and your answer is ${result}`);
+    } else {
+        console.log("Error");
+    };
+};
 
-// def quitMessage():
-//     quitMessage = input("Would you like to quit? y (yes) or n (no): ")
-//     return quitMessage
+calculate("+", 10, 40);
+calculate("-", 55.2, 47.3);
+calculate("*", 4, 7);
+calculate("/", 50, 5);
+calculate("$", 40, 2);
 
-// def operation(operator, num1, num2):
-//     if(operator == "+"):
-//         answer = int(num1) + int(num2)
-//     elif(operator == "*"):
-//         answer = int(num1) * int(num2)
-//     elif(operator == "/"):
-//         answer = int(num1) / int(num2)
-//     elif(operator == "-"):
-//         answer = int(num1) - int(num2)
-//     else:
-//         print("Operator invalid")
-//     return print("%s %s %s = %s" % (num1, operator, num2, answer))
-
-// choice = ""
-// while(choice != "y"):
-//     firstNum = input("Please enter in your first number: ")
-//     operator = input("Please enter in your choice of operation, ( +, - , * , / ): ")
-//     secondNum = input("Please enter in your second number: ")
-    
-//     operation(operator, firstNum, secondNum)
-
-//     choice = quitMessage()
+// Notes
+// // calculate("multiply", num1, num2);
+// // print out the message of whatever operation they did
+// // and the correct answer
+// calculate("multiply", 23, 84);
+// // console.log(" You did multiply and your answer is ${answerHere}")
+// calculate("subtract", 102, 84);
+// calculate("add", 102, 84);
+// calculate("divide", 10, 20);
