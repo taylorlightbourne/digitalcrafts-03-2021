@@ -33,7 +33,9 @@
         <button onclick="calculate()" class= "button">Calculate Total</button>
         <h3>The total amount with tip is: $ <span class="total"></span>
         <hr>
-        <ul id="tipHistory">Tip History</ul>
+        <ul id="tipHistory">Tip History
+
+        </ul>
     </div>
     <script>
        function calculate(){
@@ -49,16 +51,12 @@
             console.log(amountPaid);
             
             const displayValue = document.querySelector(".total")
-            displayValue.innerText = amountPaid
+            displayValue.innerText = amountPaid.toFixed(2)
 
-            const tipHistory = doument.queryselector("#tipHistory)");
-            console.log(tipHistory);
-
-            const tipListItem = document.createElement("li");
-            console.log(tipListItem);
-
-            tipListItem.append(tipTotal);
-            console.log(tipListItem);
+            const grabList = document.querySelector("#tipHistory");
+            const listItem = document.createElement("li");
+            listItem.innerText = tipTotal
+            grabList.append(listItem)
        }
     </script>
 </body>
