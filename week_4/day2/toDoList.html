@@ -1,9 +1,9 @@
-Make a todo list in html and css and js
+<!-- Make a todo list in html and css and js
 You cannot hard code any event listeners to the html, this has to be done with JS
 Has to have styling and layout
 You should be able to add a task by entering it into an input filed, and hitting a ADD TASK button
 each task will have a checkbox next to it that you can check or uncheck
-All the html elements need to be created in JS besides the starter files
+All the html elements need to be created in JS besides the starter files -->
 
 
 
@@ -24,7 +24,26 @@ All the html elements need to be created in JS besides the starter files
         <ul class="main-list"></ul>
     </div>
     <script>
+        const div1 = document.querySelector(".main-container")
+        console.log(div1)
 
+        const taskInput = document.createElement("input")
+        taskInput.className = "task-input"
+        taskInput.type = "input"
+
+        const enterItem = document.createElement("button")
+        enterItem.type = "button"
+        enterItem.className = "button"
+
+        main-container.append(taskInput, enterItem)
+
+        // function addTask () {
+        //     const list = document.querySelector(".main-list")
+        //     const grabInput = document.querySelector(".task-input").value
+        //     const listItem = document.createElement("li")
+        //     listItem.append(grabInput)
+        //     list.append(listItem)
+        // }
 
 
     </script>
