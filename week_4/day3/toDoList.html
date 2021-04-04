@@ -24,28 +24,32 @@ All the html elements need to be created in JS besides the starter files -->
         <ul class="main-list"></ul>
     </div>
     <script>
-        const div1 = document.querySelector(".main-container")
-        console.log(div1)
-
+        const main = document.querySelector(".main-container")
+        
         const taskInput = document.createElement("input")
         taskInput.className = "task-input"
-        taskInput.type = "input"
-
-        const enterItem = document.createElement("button")
-        enterItem.type = "button"
-        enterItem.className = "button"
-
-        main-container.append(taskInput, enterItem)
-
-        // function addTask () {
-        //     const list = document.querySelector(".main-list")
-        //     const grabInput = document.querySelector(".task-input").value
-        //     const listItem = document.createElement("li")
-        //     listItem.append(grabInput)
-        //     list.append(listItem)
-        // }
-
-
+        taskInput.type = "text"
+        taskInput.placeholder = "Ex. Wash Dishes"
+        main.append(taskInput)
+        
+        const submit = document.createElement("button")
+        submit.type = "button"
+        submit.className = "button"
+        submit.innerText = "Add Task"
+        main.append(submit)
+        
+        function addTask() {
+            const list = document.querySelector(".main-list")
+            const listItem = document.createElement("input")
+            listItem.type = "checkbox";
+            const addItem = document.querySelector(".task-input").value
+            list.append(listItem, addItem);
+        }
+        submit.addEventListener("click", function() {
+            addTask();
+        
+        });
+   
     </script>
 </body>
 </html>
