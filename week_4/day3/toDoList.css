@@ -1,0 +1,34 @@
+body {
+    display: grid;
+    place-items: center;
+    margin-top: 18%;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1px;
+    background-color: #f0efeb;
+
+}
+.button {
+    background-color: #e0fbfc;
+    /* font-family: 'Bebas Neue', cursive; */
+    border: none;
+    color: #293241;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.task-input {
+        background-color: #e0fbfc;
+        color: #ee6c4d;
+        border: none;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+}
+h1 {
+    text-align: center;
+    color: #3d5a80;
+}
