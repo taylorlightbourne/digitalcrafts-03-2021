@@ -3,3 +3,11 @@
     flex-wrap: wrap;
     justify-content: space-around;
   }
+  .pokemon {
+    color: antiquewhite;
+    text-align: center;
+    background-color: #5885af;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    padding: 30px;
+  }
