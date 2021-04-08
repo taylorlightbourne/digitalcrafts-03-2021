@@ -3,7 +3,8 @@ font-family: 'Montserrat', sans-serif; */
 
 body {
     box-sizing: border-box;
-    background-color: #6c757d;
+    /* background-color: #adb5bd; */
+    background-image: linear-gradient(to left, rgba(255,0,0,0), #adb5bd);;
 }
 #heading, #buttons {
     font-family: 'Dela Gothic One', cursive;
@@ -12,6 +13,7 @@ body {
     display: flex;
     justify-content: center;
     align-content: center;
+    position: sticky;
 }
 button {
     background-color: #fca311;
@@ -23,6 +25,10 @@ button {
     display: inline-block;
     font-size: 16px;
     margin: 0 10px 0 10px;
+    box-shadow: 10px 10px 5px #343a40;
+}
+button:hover {
+    opacity: 0.6;
 }
 main {
     display: flex;
@@ -36,15 +42,25 @@ main {
 li {
     list-style-type: none;
 }
+h3 {
+    background: #fca311;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 15px;
+    width: 220px;
+    height: 15px;
+    justify-content: center;
+    text-align: center;
+}
 .personCard {
     text-align: center;
-    background-color: #14213d;
+    background-image: linear-gradient(to right, #000000, #14213d);;
     margin: 20px;
     border-radius: 15px;
     padding: 30px;
     color: white;
     font-family: 'Montserrat', sans-serif;
-    max-width: 400px;
+    max-width: 300px;
     border: 5px solid black;
     box-shadow: 10px 10px 5px #343a40;
 }
@@ -57,17 +73,24 @@ li {
     border-radius: 50%;
     border: 5px solid white;
 }
+.personCard img:hover {
+    opacity: 0.6;
+}
 .userCard {
     max-width: 30%;
     text-align: center;
     margin: 20px;
-    background-color: #14213d;
+    background-image: linear-gradient(to right, #000000, #14213d);;
     color: white;
     border-radius: 15px;
     padding: 30px;
     font-family: 'Montserrat', sans-serif;
     border: 5px solid white;
     box-shadow: 10px 10px 5px #343a40;
+    min-width: 300px;
+}
+.userCard h3 {
+    margin-left: 15%;
 }
 .userContainer {
     border-radius: 25px;
