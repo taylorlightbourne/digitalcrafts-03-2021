@@ -1,6 +1,6 @@
-const mainContainer = document.querySelector(".main-container");
-
 // Get People
+const cardContainer = document.querySelector(".cardContainer");
+
 const peopleData = async () => {
     let response = await fetch("https://fakerapi.it/api/v1/persons?_quantity=30&_gender=male&_birthday_start=2005-01-01");
     let json = await response.json();
@@ -12,68 +12,66 @@ const peopleData = async () => {
     
     for (let people of json.data) {
         console.log(people);
-        const peopleContents = document.querySelector(".peopleContents");
-        const peopleFirstName = document.createElement("h3");
-        peopleFirstName.classname = "firstName";
-        peopleFirstName.innerHTML = people['firstname'];
-        const peopleLastName = document.createElement("h3");
-        peopleLastName.classname = "lastName";
-        peopleLastName.innerHTML = people['lastname'];
+        const personCard = document.createElement("div");
+        personCard.className = "personCard";
+        const peopleFullName = document.createElement("h3");
+        peopleFullName.className = "peopleFullName";
+        peopleFullName.innerHTML = people['firstname'] + " " + people['lastname'];
+        const personInfo = document.createElement("ul");
         const img = document.createElement("img");
         img.src = `http://placeimg.com/${counter1}/${counter2}/people`;
         img.height = "250";
         img.width = "250";
-        const address = document.createElement("p");
-        address.classname = "address";
+        const address = document.createElement("li");
         address.innerHTML = people['address']['city', 'country'];
-        const email = document.createElement("p");
-        email.classname = "email";
+        const email = document.createElement("li");
         email.innerHTML = people['email'];
-        const phone = document.createElement("p");
-        phone.classname = "phone";
+        const phone = document.createElement("li");
         phone.innerHTML = people['phone'];
-        const website = document.createElement("p");
-        website.classname = "website";
+        const website = document.createElement("li");
         website.innerHTML = people['website'];
 
-        peopleContents.append(img, peopleFirstName, peopleLastName, address, email, phone, website);
+        personCard.append(img, peopleFullName, address, email, phone, website);
+        cardContainer.append(personCard, personInfo);
         counter1 += 480;
         counter2 += 630;
     }
     return json;
 }
-
 const buttonPeople = document.querySelector("#getPeople")
 buttonPeople.addEventListener("click", function() {
     peopleData();
 });
-// Get Places
+
+// Get User
+const userContainer = document.querySelector(".userContainer");
+
 const userData = async () => {
-    let response = await fetch("https://fakerapi.it/api/v1/users?_quantity=30&_gender=male");
-    let json = await response.json();
-    console.log(json);
-
+    let getUserInfo = await fetch("https://fakerapi.it/api/v1/users?_quantity=30&_gender=male");
+    let formatUsers = await getUserInfo.json();
+    console.log(formatUsers);
     
     
-    for (let user of json.data) {
+    
+    for (let user of formatUsers.data) {
         console.log(user);
-        const userContents = document.querySelector(".userContents");
-        const userFirstName = document.createElement("h3");
-        userFirstName.classname = "firstName";
-        userFirstName.innerHTML = user['firstname'];
-        const userLastName = document.createElement("h3");
-        userLastName.classname = "lastName";
-        userLastName.innerHTML = user['lastname'];
-        const uuid = document.createElement("p");
+        const userCard = document.createElement("div");
+        userCard.className = "userCard";
+        const userFullName = document.createElement("h3");
+        userFullName.classname = "userFullName";
+        userFullName.innerHTML = user['firstname'] + " " + user['lastname'];
+        const userInfo = document.createElement("ul");
+        const uuid = document.createElement("li");
         uuid.classname = "uuid";
-        uuid.innerHTML = user['uuid'];
-        const userName = document.createElement("p");
+        uuid.innerHTML = "User ID: " + user['uuid'];
+        const userName = document.createElement("li");
         userName.classname = "userName";
-        userName.innerHTML = user['username'];
-
-        userContents.append(userFirstName, userLastName, uuid, userName);
+        userName.innerHTML = "User Name: " + user['username'];
+        
+        userCard.append(userFullName, uuid, userName);
+        userContainer.append(userCard, userInfo);
     }
-    return json;
+    return formatUsers;
 }
 
 const buttonUser = document.querySelector("#getUser")

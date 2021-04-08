@@ -4,21 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fakerAPI.css">
 </head>
 <body>
-   <div class="main-container">
-       <div class="header">
-           <h1>Faker Website</h1>
-           <button id="getPeople">Get People</button>
-           <button id="getUser">Get User</button>
-       </div>
-       <div class="peopleContents">
-       </div>
-       <div class="userContents">
+    <div class="header">
+        <div id="heading">
+            <img src="D E S I G N E R - Copy.png">
         </div>
-   </div> 
+        <div id="buttons">
+            <button id="getPeople">Get People</button>
+            <button id="getUser">Get User</button>
+        </div>
+    </div>
+<main>
+    <div class="cardContainer">
+       <div class="peopleContents" id="people"></div>
+    </div> 
+    <div class="userContainer">
+        <div class="userContents" id="users"></div>
+    </div>
+</main>
 </body>
 <script src="fakerAPI.js"></script>
 </html>
+
