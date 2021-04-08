@@ -1,0 +1,23 @@
+body {
+    margin-top: 100px;
+    text-align: center;
+    width: 500px auto;
+  }
+
+@keyframes heartbeat {
+    to {
+      transform: scale(1.5);
+    }
+  }
+
+.heart {
+    animation: heartbeat 300ms infinite alternate;
+    font-size: 100px;
+    color: red;
+    transform-origin: center;
+  }
+
+.container {
+    margin: 0 auto;
+    max-width: 100px;
+  }

@@ -1,3 +1,11 @@
+const buttonPeople = document.querySelector("#getPeople")
+buttonPeople.addEventListener("click", function() {
+    peopleData();
+});
+const buttonUser = document.querySelector("#getUser")
+buttonUser.addEventListener("click", function() {
+    userData();
+});
 // Get People
 const cardContainer = document.querySelector(".cardContainer");
 
@@ -14,14 +22,18 @@ const peopleData = async () => {
         console.log(people);
         const personCard = document.createElement("div");
         personCard.className = "personCard";
+
         const peopleFullName = document.createElement("h3");
         peopleFullName.className = "peopleFullName";
         peopleFullName.innerHTML = people['firstname'] + " " + people['lastname'];
+
         const personInfo = document.createElement("ul");
+
         const img = document.createElement("img");
         img.src = `http://placeimg.com/${counter1}/${counter2}/people`;
         img.height = "250";
         img.width = "250";
+
         const address = document.createElement("li");
         address.innerHTML = people['address']['city', 'country'];
         const email = document.createElement("li");
@@ -38,10 +50,6 @@ const peopleData = async () => {
     }
     return json;
 }
-const buttonPeople = document.querySelector("#getPeople")
-buttonPeople.addEventListener("click", function() {
-    peopleData();
-});
 
 // Get User
 const userContainer = document.querySelector(".userContainer");
@@ -57,10 +65,13 @@ const userData = async () => {
         console.log(user);
         const userCard = document.createElement("div");
         userCard.className = "userCard";
+
         const userFullName = document.createElement("h3");
         userFullName.classname = "userFullName";
         userFullName.innerHTML = user['firstname'] + " " + user['lastname'];
+
         const userInfo = document.createElement("ul");
+
         const uuid = document.createElement("li");
         uuid.classname = "uuid";
         uuid.innerHTML = "User ID: " + user['uuid'];
@@ -74,7 +85,3 @@ const userData = async () => {
     return formatUsers;
 }
 
-const buttonUser = document.querySelector("#getUser")
-buttonUser.addEventListener("click", function() {
-    userData();
-});
