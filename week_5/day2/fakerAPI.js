@@ -2,6 +2,9 @@
 const cardContainer = document.querySelector(".cardContainer");
 
 const peopleData = async () => {
+    // if (cardContainer!=""){
+    //     cardContainer.innerHTML=""
+    // }
     let response = await fetch("https://fakerapi.it/api/v1/persons?_quantity=30&_gender=male&_birthday_start=2005-01-01");
     let json = await response.json();
     console.log(json);
@@ -47,6 +50,9 @@ buttonPeople.addEventListener("click", function() {
 const userContainer = document.querySelector(".userContainer");
 
 const userData = async () => {
+    // if (userContainer!=""){
+    //     userContainer.innerHTML=""
+    // }
     let getUserInfo = await fetch("https://fakerapi.it/api/v1/users?_quantity=30&_gender=male");
     let formatUsers = await getUserInfo.json();
     console.log(formatUsers);
