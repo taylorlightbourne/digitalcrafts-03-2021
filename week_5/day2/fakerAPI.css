@@ -1,9 +1,7 @@
 /* font-family: 'Dela Gothic One', cursive;
 font-family: 'Montserrat', sans-serif; */
-
 body {
     box-sizing: border-box;
-    /* background-color: #adb5bd; */
     background-image: linear-gradient(to left, rgba(255,0,0,0), #adb5bd);;
 }
 #heading, #buttons {
@@ -12,8 +10,10 @@ body {
     font-size: 20px;
     display: flex;
     justify-content: center;
-    align-content: center;
-    position: sticky;
+    align-items: center;
+}
+#heading img {
+    margin-top: 15%;
 }
 button {
     background-color: #fca311;
