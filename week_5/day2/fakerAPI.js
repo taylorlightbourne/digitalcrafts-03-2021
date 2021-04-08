@@ -10,14 +10,14 @@ buttonUser.addEventListener("click", function() {
 const cardContainer = document.querySelector(".cardContainer");
 
 const peopleData = async () => {
-    let response = await fetch("https://fakerapi.it/api/v1/persons?_quantity=30&_gender=male&_birthday_start=2005-01-01");
-    let json = await response.json();
+    let getPeopleData = await fetch("https://fakerapi.it/api/v1/persons?_quantity=30&_gender=male&_birthday_start=2005-01-01");
+    let formatPeople = await getPeopleData.json();
     let counter1 = 480;
     let counter2 = 630;
 
     
     
-    for (let people of json.data) {
+    for (let people of formatPeople.data) {
         const personCard = document.createElement("div");
         personCard.className = "personCard";
 
@@ -46,7 +46,7 @@ const peopleData = async () => {
         counter1 += 480;
         counter2 += 630;
     }
-    return json;
+    return formatPeople;
 }
 
 // Get User
