@@ -6,10 +6,16 @@ const buttonUser = document.querySelector("#getUser")
 buttonUser.addEventListener("click", function() {
     userData();
 });
+const clearSelection = document.querySelector("#clear-btn")
+clearSelection.addEventListener("click", () => location.reload())
+
 // Get People
 const cardContainer = document.querySelector(".cardContainer");
 
 const peopleData = async () => {
+    if (cardContainer.length!=0){
+        cardContainer.innerHTML= ""
+    }
     let getPeopleData = await fetch("https://fakerapi.it/api/v1/persons?_quantity=30&_gender=male&_birthday_start=2005-01-01");
     let formatPeople = await getPeopleData.json();
     let counter1 = 480;
@@ -53,6 +59,9 @@ const peopleData = async () => {
 const userContainer = document.querySelector(".userContainer");
 
 const userData = async () => {
+    if (cardContainer!=""){
+        cardContainer.innerHTML= ""
+    }
     let getUserInfo = await fetch("https://fakerapi.it/api/v1/users?_quantity=30&_gender=male");
     let formatUsers = await getUserInfo.json();
     
