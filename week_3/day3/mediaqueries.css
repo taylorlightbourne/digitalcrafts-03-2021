@@ -16,9 +16,10 @@
 }
 
 /* @media screen and (min-width: 660px) */
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 600px) {
     .navbar a {
         float: none;
         width:100%;
     }
+    
 }
