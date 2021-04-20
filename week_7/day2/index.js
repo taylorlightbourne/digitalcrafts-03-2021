@@ -15,8 +15,8 @@ app.get("/about", (req, res) => {
 });
 
 app.post("/team", (req, res) => {
-    const {name,age} = req.body
-    const message = `Team member ${name} is ${age} years old`
+    const {name,age} = req.body[0];
+    const message = `Team member ${name} is ${age} years old`;
     res.send(message)
 });
 
