@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (req,res) => {
-    res.send("Welcome to my address book!")
+    res.send("Welcome to my grocery list!")
    })
 
 // Create
@@ -17,7 +17,7 @@ app.post("/grocerylist", async (req, res) => {
         const { description } = req.body;
 
       const newGroceryItemInDB = await pool.query(
-        "INSERT INTO grocerylist (description) VALUES($1)",
+        "INSERT INTO groceries (description) VALUES($1)",
         [description]
       );
   
