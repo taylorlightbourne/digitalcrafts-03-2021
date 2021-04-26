@@ -1,36 +1,37 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const port = process.env.PORT || 3005;
+const port = process.env.PORT || 3008;
 const pool = require("./db.js");
 
 app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-    res.send("Welcome to server for project list");
+    res.send("Welcome to server for pizza list");
   });
 
-  // Create
-app.post("/productlist", async (req, res) => {
+// Create
+  app.post("/pizzalist", async (req, res) => {
     try {
         const { description } = req.body;
 
-      const productItem = await pool.query(
-        "INSERT INTO productlist (id) VALUES($1)",
+      const pizzaType = await pool.query(
+        "INSERT INTO pizza (description) VALUES($1)",
         [description]
       );
   
-      res.json(productItem);
+      res.json(pizzaType);
     } catch (err) {
       console.error(err.message);
     }
   });
+
 // Read All
-app.get("/read_productlist", async (req, res) => {
+app.get("/read_pizzalist", async (req, res) => {
     try {
       const readProductItem = await pool.query(
-        "SELECT * from productlist ORDER BY product_id"
+        "SELECT * from pizza ORDER BY pizza_id"
       );
       res.json(readProductItem.rows);
     } catch (err) {
@@ -39,12 +40,12 @@ app.get("/read_productlist", async (req, res) => {
   });
   
   // Read One
-  app.get("/read_productlist/:id", async (req, res) => {
+  app.get("/read_pizzalist/:id", async (req, res) => {
     try {
       const { id } = req.params; // this looks at the url for whatever you put in :
   
       const readSingleProductItem = await pool.query(
-        "SELECT * from todo WHERE product_id = ($1)",
+        "SELECT * from pizza WHERE pizza_id = ($1)",
         [id]
       );
       res.json(readSingleProductItem);
@@ -53,30 +54,30 @@ app.get("/read_productlist", async (req, res) => {
     }
   });
   // Update One
-  app.put("/update_productlist/:id", async (req, res) => {
+  app.put("/update_pizzalist/:id", async (req, res) => {
     try {
       const { id } = req.params;
       const { description } = req.body;
   
-      const updateProductItems = await pool.query(
-        "UPDATE todo SET description = $1 WHERE product_id = $2",
+      const updatePizzaItems = await pool.query(
+        "UPDATE pizza SET description = $1 WHERE pizza_id = $2",
         [description, id]
       );
   
-      res.json("Updated the product list!");
+      res.json("Updated the pizza list!");
     } catch (err) {
       console.error(err.message);
     }
   });
   // Delete One
-  app.delete("/delete_productlist/:id", async (req, res) => {
+  app.delete("/delete_pizzalist/:id", async (req, res) => {
     try {
       const { id } = req.params;
-      const deleteProductItems = await pool.query(
-        "DELETE FROM productlist WHERE product_id = $1",
+      const deletePizzaItems = await pool.query(
+        "DELETE FROM pizza WHERE pizza_id = $1",
         [id]
       );
-      res.json("product list was successfully deleted!");
+      res.json("pizza list was successfully deleted!");
     } catch (err) {
       console.log(err.message);
     }
