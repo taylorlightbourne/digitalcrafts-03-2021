@@ -1,3 +1,0 @@
-pool is a path to database
-query is our way to select on the database
-sql code is our way to access the database
