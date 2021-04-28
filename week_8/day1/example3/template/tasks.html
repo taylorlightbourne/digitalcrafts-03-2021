@@ -8,26 +8,23 @@
 </head>
 <body>
     <h1>To Do List</h1>
-    <p>Enter Task to Complete: </p>
-    <form action="" method="post">
-    <input type="text">
-    <input type="submit">
-    </form>
-
+    <p>Enter a Task:</p>
+    <input type="text" class="task">
+    <button onclick="sendDatabToDB()">Submit</button>
 </body>
-<script >
-const sendTodo = (e) => {
+<script>
+    const sendDatabToDB = async ()=> {
+        const todotask = document.querySelector(".task").value
+        const sendTheData = await fetch("http://localhost:4000/todotask", 
+        {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body:  JSON.stringify(todotask)
+        })
+        
 
-    const datatodb = await fetch("url",
-    {
-        method: 'POST', // *GET, POST, PUT, DELETE, etc.
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body:{}
-    })
-}
-
-
+    }
 </script>
 </html>
