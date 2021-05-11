@@ -5,30 +5,49 @@
   grid-template-rows: 10% 40% 50%;
   grid-template-areas:
       "nav nav"
-      "sidebar aboutme"
-      "sidebar aboutme";
-  background-color: pink;
+      "sidebar about"
+      "sidebar about";
+  background-color: #bde0fe;
 }
 .Nav {
   grid-area: nav;
-  background-color: rgb(224, 122, 95) ;
-
+  background-color: #cdb4db;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  padding-left: 3%;
+  padding-right: 5%;
+}
+.Nav .links {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  padding-right: 2px;
+  text-decoration: none;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+.Nav a {
+  text-decoration: none;
+  font-size: x-large;
 }
 .AboutContainer {
-  grid-area: aboutme; 
-  background-color: rgb(127, 255, 212);
+  grid-area: about; 
+  background-color: #ffc8dd;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .AboutMe {
-  grid-area: aboutme; 
-  background-color: rgb(61, 64, 91);
+  grid-area: about; 
+  background-color:rgb(240, 233, 234);
+  height: 700px;
+  width:900px;
 }
 .Sidebar {
   grid-area: sidebar;
-  background-color: rgb(129, 178, 154); 
+  background-color: #a2d2ff; 
   text-align: center;
-  height: 30%;
-}
+} 
