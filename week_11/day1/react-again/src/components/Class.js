@@ -19,8 +19,8 @@ export default class Class extends Component {
     console.log(this);
     return (
       <div>
-        <h1>Class.js</h1>
-        <p>this is the count {this.state.count}</p>
+        <h1>How Much Does it Weigh?</h1>
+        <h1> {this.state.count} lbs</h1>
         <button
           onClick={() =>
             this.setState({
